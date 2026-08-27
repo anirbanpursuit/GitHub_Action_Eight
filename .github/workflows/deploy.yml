@@ -22,7 +22,7 @@ jobs:
       PORT: 8080
     services:
       mongodb:
-        image: mongo
+        image: mongo:latest
         env:
           MONGOBD_INITDB_ROOT_USERNAME: root
           MONGOBD_INITDB_ROOT_PASSWORD: example
