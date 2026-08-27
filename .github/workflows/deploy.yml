@@ -25,7 +25,7 @@ jobs:
         image: mongodb
         env:
           MONGOBD_INITDB_ROOT_USERNAME: root
-          MONGOBD_INITDB_ROOT_PASSWOR: 123456
+          MONGOBD_INITDB_ROOT_PASSWORD: 123456
     steps:
       - name: Get Code
         uses: actions/checkout@v3
