@@ -15,11 +15,17 @@ jobs:
     container:
       image: node:22
     env:
-      MONGODB_CONNECTION_PROTOCOL: mongodb+srv
-      MONGODB_CLUSTER_ADDRESS: chatbothackathon.mrho6.mongodb.net
-      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
-      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
+      MONGODB_CONNECTION_PROTOCOL: mongodb
+      MONGODB_CLUSTER_ADDRESS: mongodb
+      MONGODB_USERNAME: root
+      MONGODB_PASSWORD: 123456
       PORT: 8080
+    services:
+      mongodb:
+        image: mongodb
+        env:
+          MONGOBD_INITDB_ROOT_USERNAME: root
+          MONGOBD_INITDB_ROOT_PASSWOR: 123456
     steps:
       - name: Get Code
         uses: actions/checkout@v3
