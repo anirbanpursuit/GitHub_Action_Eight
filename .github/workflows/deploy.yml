@@ -13,7 +13,7 @@ jobs:
     environment: testing
     runs-on: ubuntu-latest
     container:
-      image: node:18
+      image: node:22
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb
       MONGODB_CLUSTER_ADDRESS: mongodb
@@ -22,7 +22,7 @@ jobs:
       PORT: 8080
     services:
       mongodb:
-        image: mongodb:latest
+        image: mongo
         env:
           MONGOBD_INITDB_ROOT_USERNAME: root
           MONGOBD_INITDB_ROOT_PASSWORD: example
